@@ -23,7 +23,7 @@ export default class Store {
             this.setAuth(true)
             this.setUser(response.data.user)
         } catch (err: any) {
-            console.log(err?.response?.data?.message)
+            console.log(err.response?.data?.message)
         }
     }
     async registration(email: string, password: string) {
@@ -34,7 +34,7 @@ export default class Store {
             this.setAuth(true)
             this.setUser(response.data.user)
         } catch (err: any) {
-            console.log(err?.response?.data?.message)
+            console.log(err.response?.data?.message)
         }
     }
     async logout() {
@@ -45,7 +45,7 @@ export default class Store {
             this.setAuth(false)
             this.setUser({} as IUser)
         } catch (err: any) {
-            console.log(err?.response?.data?.message)
+            console.log(err.response?.data?.message)
         }
     }
 }
