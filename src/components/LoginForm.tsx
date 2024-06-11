@@ -9,7 +9,8 @@ const LoginForm: FC = () => {
     const {store} = useContext(Context)
 
     return(
-        <div className="">
+        <div className="container">
+            <div className='form-block'>
             <input 
                 onChange={(e) => setEmail(e.target.value)}
                 value={email}
@@ -24,6 +25,7 @@ const LoginForm: FC = () => {
             />
             <button onClick={() => {store.login(email, password)}}>Войти</button>
             <button onClick={() => {store.registration(email, password)}}>Зарегистрироваться</button>
+            </div>
         </div>
     )
 }

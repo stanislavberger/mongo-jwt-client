@@ -6,6 +6,7 @@ import { Context } from '.';
 import { observer } from 'mobx-react-lite';
 import UserService from './services/UserService';
 import { IUser } from './models/IUser';
+import Layout from './components/Layout';
 
 function App() {
   const {store} = useContext(Context)
@@ -33,7 +34,7 @@ function App() {
 
   if (!store.isAuth) {
     return (
-      <LoginForm />
+        <LoginForm />
     )
   }
 
